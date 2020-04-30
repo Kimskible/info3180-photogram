@@ -73,7 +73,7 @@ class Like(db.Model):
         self.post_id = post_id
     
 class Follow(db.Model):
-    __tablename__ = 'likes'
+    __tablename__ = 'follow'
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer , db.ForeignKey('user_profiles.id'))
     follower_id = db.Column(db.Integer , db.ForeignKey('user_profiles.id'))
